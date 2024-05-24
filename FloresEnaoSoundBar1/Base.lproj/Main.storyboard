@@ -75,7 +75,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk5-5n-9Je">
-                                <rect key="frame" x="20" y="258" width="374" height="29"/>
+                                <rect key="frame" x="20" y="376" width="374" height="29"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -83,12 +83,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Nombre del Audio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jaz-js-gWZ">
-                                <rect key="frame" x="20" y="317" width="374" height="26.5"/>
+                                <rect key="frame" x="20" y="435" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pV-50-yYQ">
-                                <rect key="frame" x="169" y="363.5" width="76" height="31"/>
+                                <rect key="frame" x="169" y="481.5" width="76" height="31"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
@@ -97,22 +97,46 @@
                                     <action selector="agregarTapped:" destination="wbd-Aw-EhK" eventType="touchUpInside" id="hh8-wS-SGd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tiempo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsd-Yw-5L7">
+                                <rect key="frame" x="114" y="328" width="186" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="QBV-qP-eMz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fth-lc-VqS">
+                                <rect key="frame" x="130" y="264" width="154" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" red="0.91161376699999996" green="0.77238156700000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="yFT-HL-f1l"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="volumenSliderChanged:" destination="wbd-Aw-EhK" eventType="valueChanged" id="RaU-Je-fud"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4K8-wl-tL6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7ft-qf-CIZ" firstAttribute="top" secondItem="4K8-wl-tL6" secondAttribute="top" constant="20" id="1vA-9j-5od"/>
                             <constraint firstItem="7ft-qf-CIZ" firstAttribute="centerX" secondItem="BVV-WZ-oDZ" secondAttribute="centerX" id="DmE-Tr-fgA"/>
+                            <constraint firstItem="fth-lc-VqS" firstAttribute="top" secondItem="Ztd-C2-4e3" secondAttribute="bottom" constant="36" id="F7X-ku-wYE"/>
                             <constraint firstItem="4K8-wl-tL6" firstAttribute="trailing" secondItem="Jaz-js-gWZ" secondAttribute="trailing" constant="20" id="GTi-az-4MD"/>
                             <constraint firstItem="sk5-5n-9Je" firstAttribute="leading" secondItem="4K8-wl-tL6" secondAttribute="leading" constant="20" id="H0D-da-Ktp"/>
                             <constraint firstItem="4K8-wl-tL6" firstAttribute="trailing" secondItem="sk5-5n-9Je" secondAttribute="trailing" constant="20" id="RM4-dI-O8w"/>
+                            <constraint firstItem="fth-lc-VqS" firstAttribute="centerX" secondItem="BVV-WZ-oDZ" secondAttribute="centerX" id="S2J-sS-LwP"/>
                             <constraint firstItem="sk5-5n-9Je" firstAttribute="centerX" secondItem="BVV-WZ-oDZ" secondAttribute="centerX" id="T7b-0M-D4D"/>
                             <constraint firstItem="Ztd-C2-4e3" firstAttribute="top" secondItem="7ft-qf-CIZ" secondAttribute="bottom" constant="20" id="VXF-6y-EMa"/>
                             <constraint firstItem="9pV-50-yYQ" firstAttribute="centerX" secondItem="BVV-WZ-oDZ" secondAttribute="centerX" id="YYZ-ay-VJn"/>
                             <constraint firstItem="9pV-50-yYQ" firstAttribute="top" secondItem="Jaz-js-gWZ" secondAttribute="bottom" constant="20" id="bvf-Yh-Gbb"/>
                             <constraint firstItem="Jaz-js-gWZ" firstAttribute="top" secondItem="sk5-5n-9Je" secondAttribute="bottom" constant="30" id="gRK-xH-4qD"/>
-                            <constraint firstItem="sk5-5n-9Je" firstAttribute="top" secondItem="Ztd-C2-4e3" secondAttribute="bottom" constant="30" id="gye-iY-wHW"/>
+                            <constraint firstItem="sk5-5n-9Je" firstAttribute="top" secondItem="dsd-Yw-5L7" secondAttribute="bottom" constant="25" id="gkI-gy-cMZ"/>
+                            <constraint firstItem="dsd-Yw-5L7" firstAttribute="centerX" secondItem="BVV-WZ-oDZ" secondAttribute="centerX" id="gof-7M-5JN"/>
                             <constraint firstItem="Jaz-js-gWZ" firstAttribute="centerX" secondItem="BVV-WZ-oDZ" secondAttribute="centerX" id="hbJ-oi-6mY"/>
+                            <constraint firstItem="dsd-Yw-5L7" firstAttribute="top" secondItem="fth-lc-VqS" secondAttribute="bottom" constant="34" id="nGy-3T-c7d"/>
                             <constraint firstItem="Jaz-js-gWZ" firstAttribute="leading" secondItem="4K8-wl-tL6" secondAttribute="leading" constant="20" id="qjg-Oa-tr8"/>
                             <constraint firstItem="Ztd-C2-4e3" firstAttribute="centerX" secondItem="BVV-WZ-oDZ" secondAttribute="centerX" id="rQZ-DR-0DF"/>
                         </constraints>
@@ -123,6 +147,8 @@
                         <outlet property="grabarButton" destination="7ft-qf-CIZ" id="kX3-Gh-9VD"/>
                         <outlet property="nombreTextField" destination="Jaz-js-gWZ" id="zHM-6O-0dt"/>
                         <outlet property="reproducirButton" destination="Ztd-C2-4e3" id="0zM-jZ-7rZ"/>
+                        <outlet property="tiempoGrabacionLabel" destination="dsd-Yw-5L7" id="2Py-IR-Tiw"/>
+                        <outlet property="volumenSlider" destination="fth-lc-VqS" id="IYJ-Vs-a7Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hN-7E-G2z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -159,6 +185,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
